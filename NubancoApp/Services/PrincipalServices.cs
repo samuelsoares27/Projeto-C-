@@ -9,6 +9,11 @@ namespace NubancoApp.Services
     {
         private PrincipalRepository _repository { get; set; }
 
+        public List<Princi> Retorna()
+        {
+            return _repository.RetornaCampos();
+        }
+
         public PrincipalServices()
         {
             _repository = new PrincipalRepository();
