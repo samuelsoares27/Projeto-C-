@@ -7,25 +7,26 @@ namespace NubancoApp
 {
     public partial class FormLogin : Form
     {
+
+
         public FormLogin()
         {
             InitializeComponent();
         }
 
-        private void Button3_Click(object sender, System.EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void Button1_Click(object sender, System.EventArgs e)
+
+        private void btnLogarCom_Click(object sender, System.EventArgs e)
         {
             // com injection
             using (var service = new LoginService())
             {
-                var authenticated = service.GetLogin(textBox1.Text, textBox2.Text, false);
-                if (!(authenticated is null))
+                var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, false);
+
+                if (!(autenticacao is null))
                 {
-                    Global.Instance.SetUser(authenticated);
+
+                    Global.Instance.SetUser(autenticacao);
 
                     this.Hide();
                     Principal frmP = new Principal();
@@ -40,15 +41,19 @@ namespace NubancoApp
             }
         }
 
-        private void Button2_Click(object sender, System.EventArgs e)
+
+
+        private void btnLogarSem_Click(object sender, System.EventArgs e)
         {
             // sem injection
             using (var service = new LoginService())
             {
-                var authenticated = service.GetLogin(textBox1.Text, textBox2.Text, true);
-                if (!(authenticated is null))
+                var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, true);
+
+                if (!(autenticacao is null))
                 {
-                    Global.Instance.SetUser(authenticated);
+
+                    Global.Instance.SetUser(autenticacao);
 
                     this.Hide();
                     Principal frmP = new Principal();
@@ -62,6 +67,14 @@ namespace NubancoApp
                 }
             }
         }
+
+        private void LblSair_Click(object sender, System.EventArgs e)
+        {
+
+            Application.Exit();
+
+        }
+
 
     }
 }
