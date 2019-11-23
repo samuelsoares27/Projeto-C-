@@ -129,5 +129,8 @@
   <ItemGroup>
     <Folder Include="Tests\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-XPEvents1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
