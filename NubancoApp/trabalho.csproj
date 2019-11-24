@@ -73,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumConta.cs" />
+    <Compile Include="filtro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="filtro.Designer.cs">
+      <DependentUpon>filtro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\PrincipalServices.cs" />
     <Compile Include="Services\Service.cs" />
+    <EmbeddedResource Include="filtro.resx">
+      <DependentUpon>filtro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

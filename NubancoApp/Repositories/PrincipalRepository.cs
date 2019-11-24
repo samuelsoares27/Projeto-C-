@@ -10,10 +10,12 @@ namespace NubancoApp.Repositories
         
         public List <Princi> RetornaCampos()
         {
-            string query = " SELECT a.valor, if(a.tipo = 0, 'Receber', 'Pagar') AS Pagamento,  a.descricao, a.vencimento, a.lancamento, a.efetuada  FROM contas a ";
+            string query = " SELECT id, valor, if(tipo = 0, 'Receber', 'Pagar') AS Pagamento, " +
+                           " descricao, vencimento, lancamento, efetuada " +
+                           " FROM contas ";
 
             return _conn.Query<Princi>(query).ToList();
         }
-
+    
     }
 }
