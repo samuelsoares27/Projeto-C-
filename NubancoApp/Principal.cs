@@ -21,6 +21,7 @@ namespace NubancoApp
         public Principal()
         {
             InitializeComponent();
+            tabControl1.TabPages.Remove(tabCadastro);
         }
 
         public object Tipo { get; internal set; }
@@ -79,6 +80,7 @@ namespace NubancoApp
             cbPagar.Checked = true;
             dtpPagar.Value = DateTime.Now;
             tabControl1.SelectedTab = tabLista;
+            tabControl1.TabPages.Remove(tabCadastro);
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -116,6 +118,7 @@ namespace NubancoApp
                 rbPagar.Checked = true;
             }
 
+            tabControl1.TabPages.Add(tabCadastro);
             tabControl1.SelectedTab = tabCadastro;
         }
 
@@ -161,6 +164,9 @@ namespace NubancoApp
             dtpPagar.Value = DateTime.Now;
             tabControl1.SelectedTab = tabLista;
             conta = null;
+
+            tabControl1.TabPages.Remove(tabCadastro);
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -177,6 +183,13 @@ namespace NubancoApp
         
                 }
             }
+        }
+
+        private void BtnCadastrar_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabCadastro);
+            tabControl1.TabPages.Add(tabCadastro);
+            tabControl1.SelectedTab = tabCadastro;
         }
     }
 }

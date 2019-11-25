@@ -68,3 +68,4 @@ C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Deb
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.exe
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.pdb
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.filtro.resources
+C:\Users\Luan\Desktop\Unifenas\8º Periodo\Segurança Computacional\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.filtro.resources

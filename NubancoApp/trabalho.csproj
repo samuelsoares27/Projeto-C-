@@ -139,7 +139,19 @@
     <Folder Include="Tests\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Logo-XPEvents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Logo-XPEvents1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
