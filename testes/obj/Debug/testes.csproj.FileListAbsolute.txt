@@ -1,0 +1,17 @@
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\testes.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\testes.pdb
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\obj\Debug\testes.csprojAssemblyReference.cache
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\obj\Debug\testes.csproj.CoreCompileInputs.cache
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\obj\Debug\testes.csproj.CopyComplete
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\obj\Debug\testes.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\testes\obj\Debug\testes.pdb

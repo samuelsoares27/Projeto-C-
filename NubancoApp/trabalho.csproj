@@ -153,5 +153,11 @@
   <ItemGroup>
     <Content Include="Resources\add.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\testes\testes.csproj">
+      <Project>{e46392bd-ea59-4ec7-9862-7676f6b4d2ee}</Project>
+      <Name>testes</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -69,3 +69,11 @@ C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Deb
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.pdb
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.filtro.resources
 C:\Users\Luan\Desktop\Unifenas\8º Periodo\Segurança Computacional\Projeto-C-\NubancoApp\obj\Debug\NubancoApp.filtro.resources
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\pt\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\testes.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\testes.pdb
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\NubancoApp\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml

@@ -17,11 +17,37 @@ namespace NubancoApp
     {
         public TipoDaConta modo = TipoDaConta.Receber;
         public Princi conta = null;
+        DateTime? data = null;
 
         public Principal()
         {
             InitializeComponent();
             tabControl1.TabPages.Remove(tabCadastro);
+        }
+
+        private void Totalizadores()
+        {
+            
+            using (var service = new PrincipalServices())
+            {
+              
+                IEnumerable<Princi> contas = null;
+                contas = service.Retorna();
+                RecDespSource.DataSource = contas; 
+
+                if (!(data is null))
+                {
+                    contas = contas.Where(f => f.Vencimento.ToShortDateString() == data.GetValueOrDefault().ToShortDateString()).ToList();
+                }
+                
+                var totalReceber = service.TotalContasReceber(contas.ToList());
+                var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                lblpagar.Text = "Pagar: R$ " + totalPagar;
+                lblreceber.Text = "Receber: R$ " + totalReceber;
+
+            }
+
         }
 
         public object Tipo { get; internal set; }
@@ -68,11 +94,8 @@ namespace NubancoApp
                     conta = null;
                 }
 
-            }
+                RecDespSource.DataSource = service.Retorna();
 
-            using (var service = new PrincipalServices())
-            {
-                dgvLista.DataSource = service.Retorna();
             }
 
             ValorPagar.Value = 0;
@@ -84,11 +107,8 @@ namespace NubancoApp
         }
 
         private void Principal_Load(object sender, EventArgs e)
-        {  
-            using (var service = new PrincipalServices())
-            {
-                RecDespSource.DataSource = service.Retorna();
-            }
+        {
+            Totalizadores();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -137,8 +157,8 @@ namespace NubancoApp
 
                 if (frm.data is null) return;
                 contas = service.Retorna();
-                contas = contas.Where(f => f.Vencimento.ToShortDateString() == frm.data.GetValueOrDefault().ToShortDateString());
-                RecDespSource.DataSource = contas;
+                RecDespSource.DataSource = contas.Where(f => f.Vencimento.ToShortDateString() == data.GetValueOrDefault().ToShortDateString()).ToList();
+                dgvLista.Refresh();
             }
             
         }
@@ -153,17 +173,12 @@ namespace NubancoApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (var service = new PrincipalServices())
-            {
-                dgvLista.DataSource = service.Retorna();
-            }
 
             ValorPagar.Value = 0;
             tbDescPagar.Text = "";
             cbPagar.Checked = true;
             dtpPagar.Value = DateTime.Now;
             tabControl1.SelectedTab = tabLista;
-            conta = null;
 
             tabControl1.TabPages.Remove(tabCadastro);
 
@@ -172,6 +187,11 @@ namespace NubancoApp
         private void button4_Click(object sender, EventArgs e)
         {
             var conta = RecDespSource.Current as Princi;
+            if (conta.Efetuada)
+            {
+                MessageBox.Show("Não é possível excluir contas efetuadas.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var result = MessageBox.Show("Tem certeza que deseja excluir a conta a receber selecionada?", "Ação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
