@@ -53,5 +53,5 @@ C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debu
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.csproj.CopyComplete
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.exe
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.pdb
-C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.csprojAssemblyReference.cache
 C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.Principal.resources
+C:\Users\samue\OneDrive\Área de Trabalho\Trabalho\Projeto-C-\Trabalhoo\obj\Debug\Trabalhoo.csprojAssemblyReference.cache
