@@ -14,6 +14,16 @@ namespace Trabalhoo.Services
             return _repository.RetornaCampos();
         }
 
+        public List<Princi> RetornaRec()
+        {
+            return _repository.RetornaReceber();
+        }
+
+        public List<Princi> RetornaPag()
+        {
+            return _repository.RetornaPagar();
+        }
+
         public PrincipalServices()
         {
             _repository = new PrincipalRepository();

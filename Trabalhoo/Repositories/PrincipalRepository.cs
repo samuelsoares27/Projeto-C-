@@ -16,6 +16,25 @@ namespace Trabalhoo.Repositories
 
             return _conn.Query<Princi>(query).ToList();
         }
-    
+
+        public List<Princi> RetornaReceber()
+        {
+            string query = " SELECT id, valor, tipo AS Tipo, " +
+                           "        descricao, vencimento, lancamento, efetuada " +
+                           "        FROM contas " +
+                           "        WHERE tipo = 0 ";
+
+            return _conn.Query<Princi>(query).ToList();
+        }
+
+        public List<Princi> RetornaPagar()
+        {
+            string query = " SELECT id, valor, tipo AS Tipo, " +
+                           "        descricao, vencimento, lancamento, efetuada " +
+                           "        FROM contas " +
+                           "        WHERE tipo = 1 ";
+
+            return _conn.Query<Princi>(query).ToList();
+        }
     }
 }

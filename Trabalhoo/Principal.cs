@@ -114,6 +114,10 @@ namespace Trabalhoo
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            cbbPagarReceber.Items.Add("Todos");
+            cbbPagarReceber.Items.Add("Pagar");
+            cbbPagarReceber.Items.Add("Receber");
+            cbbPagarReceber.SelectedIndex = 0;
             Totalizadores();
         }
 
@@ -227,6 +231,54 @@ namespace Trabalhoo
             tabControl1.TabPages.Remove(tabCadastro);
             tabControl1.TabPages.Add(tabCadastro);
             tabControl1.SelectedTab = tabCadastro;
+        }
+
+        private void cbbPagarReceber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            IEnumerable<Princi> contas = null;
+
+            if (cbbPagarReceber.Text == "Todos")
+            {
+                using (var service = new PrincipalServices())
+                {
+                    contas = service.Retorna();
+                    RecDespSource.DataSource = contas;
+                    var totalReceber = service.TotalContasReceber(contas.ToList());
+                    var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                    lblpagar.Text = "Pagar: R$ " + totalPagar;
+                    lblreceber.Text = "Receber: R$ " + totalReceber;
+                }
+            }
+            else if(cbbPagarReceber.Text == "Pagar")
+            {
+                using (var service = new PrincipalServices())
+                {
+                    contas = service.RetornaPag();
+                    RecDespSource.DataSource = contas;
+                    var totalReceber = service.TotalContasReceber(contas.ToList());
+                    var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                    lblpagar.Text = "Pagar: R$ " + totalPagar;
+                    lblreceber.Text = "Receber: R$ " + totalReceber;
+                }
+            }
+            else if (cbbPagarReceber.Text == "Receber")
+            {
+                using (var service = new PrincipalServices())
+                {
+                    contas = service.RetornaRec();
+                    RecDespSource.DataSource = contas;
+                    var totalReceber = service.TotalContasReceber(contas.ToList());
+                    var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                    lblpagar.Text = "Pagar: R$ " + totalPagar;
+                    lblreceber.Text = "Receber: R$ " + totalReceber;
+                }
+            }
+
+
+
         }
     }
 }

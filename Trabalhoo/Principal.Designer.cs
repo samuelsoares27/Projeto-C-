@@ -31,6 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabLista = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvLista = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.RecDespSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblreceber = new System.Windows.Forms.Label();
+            this.lblpagar = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnSemFiltro = new System.Windows.Forms.Button();
+            this.btnFiltro = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.tabCadastro = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,35 +65,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ValorPagar = new System.Windows.Forms.NumericUpDown();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnApagar = new System.Windows.Forms.Button();
-            this.btnSemFiltro = new System.Windows.Forms.Button();
-            this.btnFiltro = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.RecDespSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblreceber = new System.Windows.Forms.Label();
-            this.lblpagar = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cbbPagarReceber = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabLista.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecDespSource)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ValorPagar)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecDespSource)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +104,206 @@
             this.tabLista.Size = new System.Drawing.Size(1008, 561);
             this.tabLista.TabIndex = 1;
             this.tabLista.Text = "Lista";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dgvLista);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(4, 54);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1000, 438);
+            this.panel4.TabIndex = 10;
+            // 
+            // dgvLista
+            // 
+            this.dgvLista.AllowUserToAddRows = false;
+            this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.AutoGenerateColumns = false;
+            this.dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvLista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column6,
+            this.Column4,
+            this.Column5});
+            this.dgvLista.DataSource = this.RecDespSource;
+            this.dgvLista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLista.Location = new System.Drawing.Point(0, 0);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLista.MultiSelect = false;
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.RowTemplate.Height = 24;
+            this.dgvLista.Size = new System.Drawing.Size(1000, 438);
+            this.dgvLista.TabIndex = 1;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "id";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "valor";
+            this.Column1.HeaderText = "Valor";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Tipo";
+            this.Column2.HeaderText = "Tipo";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "descricao";
+            this.Column3.HeaderText = "Descrição";
+            this.Column3.Name = "Column3";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "vencimento";
+            this.Column6.HeaderText = "Vencimento";
+            this.Column6.Name = "Column6";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "lancamento";
+            this.Column4.HeaderText = "Lançamento";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Efetuada";
+            this.Column5.HeaderText = "Efetuada";
+            this.Column5.Name = "Column5";
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblreceber);
+            this.panel3.Controls.Add(this.lblpagar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(4, 492);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1000, 65);
+            this.panel3.TabIndex = 9;
+            // 
+            // lblreceber
+            // 
+            this.lblreceber.AutoSize = true;
+            this.lblreceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblreceber.ForeColor = System.Drawing.Color.Green;
+            this.lblreceber.Location = new System.Drawing.Point(205, 25);
+            this.lblreceber.Name = "lblreceber";
+            this.lblreceber.Size = new System.Drawing.Size(185, 25);
+            this.lblreceber.TabIndex = 9;
+            this.lblreceber.Text = "Contas a Receber";
+            // 
+            // lblpagar
+            // 
+            this.lblpagar.AutoSize = true;
+            this.lblpagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpagar.ForeColor = System.Drawing.Color.Red;
+            this.lblpagar.Location = new System.Drawing.Point(17, 25);
+            this.lblpagar.Name = "lblpagar";
+            this.lblpagar.Size = new System.Drawing.Size(162, 25);
+            this.lblpagar.TabIndex = 8;
+            this.lblpagar.Text = "Contas a Pagar";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cbbPagarReceber);
+            this.panel2.Controls.Add(this.btnCadastrar);
+            this.panel2.Controls.Add(this.btnApagar);
+            this.panel2.Controls.Add(this.btnSemFiltro);
+            this.panel2.Controls.Add(this.btnFiltro);
+            this.panel2.Controls.Add(this.btnAlterar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 50);
+            this.panel2.TabIndex = 8;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrar.Location = new System.Drawing.Point(3, 2);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(117, 43);
+            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            // 
+            // btnApagar
+            // 
+            this.btnApagar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnApagar.FlatAppearance.BorderSize = 0;
+            this.btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApagar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnApagar.Location = new System.Drawing.Point(249, 2);
+            this.btnApagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(117, 43);
+            this.btnApagar.TabIndex = 9;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnSemFiltro
+            // 
+            this.btnSemFiltro.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSemFiltro.FlatAppearance.BorderSize = 0;
+            this.btnSemFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSemFiltro.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSemFiltro.Location = new System.Drawing.Point(494, 2);
+            this.btnSemFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSemFiltro.Name = "btnSemFiltro";
+            this.btnSemFiltro.Size = new System.Drawing.Size(135, 43);
+            this.btnSemFiltro.TabIndex = 8;
+            this.btnSemFiltro.Text = "Limpar Filtros";
+            this.btnSemFiltro.UseVisualStyleBackColor = false;
+            this.btnSemFiltro.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnFiltro
+            // 
+            this.btnFiltro.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnFiltro.FlatAppearance.BorderSize = 0;
+            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltro.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnFiltro.Location = new System.Drawing.Point(371, 2);
+            this.btnFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFiltro.Name = "btnFiltro";
+            this.btnFiltro.Size = new System.Drawing.Size(117, 43);
+            this.btnFiltro.TabIndex = 7;
+            this.btnFiltro.Text = "Filtrar";
+            this.btnFiltro.UseVisualStyleBackColor = false;
+            this.btnFiltro.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAlterar.Location = new System.Drawing.Point(126, 2);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(117, 43);
+            this.btnAlterar.TabIndex = 6;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // tabCadastro
             // 
@@ -285,206 +486,15 @@
             this.ValorPagar.Name = "ValorPagar";
             this.ValorPagar.Size = new System.Drawing.Size(285, 22);
             this.ValorPagar.TabIndex = 4;
-         
             // 
-            // panel2
+            // cbbPagarReceber
             // 
-            this.panel2.Controls.Add(this.btnCadastrar);
-            this.panel2.Controls.Add(this.btnApagar);
-            this.panel2.Controls.Add(this.btnSemFiltro);
-            this.panel2.Controls.Add(this.btnFiltro);
-            this.panel2.Controls.Add(this.btnAlterar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 50);
-            this.panel2.TabIndex = 8;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrar.Location = new System.Drawing.Point(3, 2);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(117, 43);
-            this.btnCadastrar.TabIndex = 10;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
-            // 
-            // btnApagar
-            // 
-            this.btnApagar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnApagar.FlatAppearance.BorderSize = 0;
-            this.btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApagar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnApagar.Location = new System.Drawing.Point(249, 2);
-            this.btnApagar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(117, 43);
-            this.btnApagar.TabIndex = 9;
-            this.btnApagar.Text = "Apagar";
-            this.btnApagar.UseVisualStyleBackColor = false;
-            this.btnApagar.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnSemFiltro
-            // 
-            this.btnSemFiltro.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSemFiltro.FlatAppearance.BorderSize = 0;
-            this.btnSemFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSemFiltro.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSemFiltro.Location = new System.Drawing.Point(494, 2);
-            this.btnSemFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSemFiltro.Name = "btnSemFiltro";
-            this.btnSemFiltro.Size = new System.Drawing.Size(135, 43);
-            this.btnSemFiltro.TabIndex = 8;
-            this.btnSemFiltro.Text = "Limpar Filtros";
-            this.btnSemFiltro.UseVisualStyleBackColor = false;
-            this.btnSemFiltro.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnFiltro
-            // 
-            this.btnFiltro.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnFiltro.FlatAppearance.BorderSize = 0;
-            this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltro.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFiltro.Location = new System.Drawing.Point(371, 2);
-            this.btnFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFiltro.Name = "btnFiltro";
-            this.btnFiltro.Size = new System.Drawing.Size(117, 43);
-            this.btnFiltro.TabIndex = 7;
-            this.btnFiltro.Text = "Filtrar";
-            this.btnFiltro.UseVisualStyleBackColor = false;
-            this.btnFiltro.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAlterar.Location = new System.Drawing.Point(126, 2);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(117, 43);
-            this.btnAlterar.TabIndex = 6;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lblreceber);
-            this.panel3.Controls.Add(this.lblpagar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(4, 492);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1000, 65);
-            this.panel3.TabIndex = 9;
-            // 
-            // lblreceber
-            // 
-            this.lblreceber.AutoSize = true;
-            this.lblreceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblreceber.ForeColor = System.Drawing.Color.Green;
-            this.lblreceber.Location = new System.Drawing.Point(205, 25);
-            this.lblreceber.Name = "lblreceber";
-            this.lblreceber.Size = new System.Drawing.Size(185, 25);
-            this.lblreceber.TabIndex = 9;
-            this.lblreceber.Text = "Contas a Receber";
-            // 
-            // lblpagar
-            // 
-            this.lblpagar.AutoSize = true;
-            this.lblpagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpagar.ForeColor = System.Drawing.Color.Red;
-            this.lblpagar.Location = new System.Drawing.Point(17, 25);
-            this.lblpagar.Name = "lblpagar";
-            this.lblpagar.Size = new System.Drawing.Size(162, 25);
-            this.lblpagar.TabIndex = 8;
-            this.lblpagar.Text = "Contas a Pagar";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dgvLista);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 54);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1000, 438);
-            this.panel4.TabIndex = 10;
-            // 
-            // dgvLista
-            // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.AllowUserToDeleteRows = false;
-            this.dgvLista.AutoGenerateColumns = false;
-            this.dgvLista.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvLista.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column6,
-            this.Column4,
-            this.Column5});
-            this.dgvLista.DataSource = this.RecDespSource;
-            this.dgvLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLista.Location = new System.Drawing.Point(0, 0);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvLista.MultiSelect = false;
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.RowTemplate.Height = 24;
-            this.dgvLista.Size = new System.Drawing.Size(1000, 438);
-            this.dgvLista.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "id";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "valor";
-            this.Column1.HeaderText = "Valor";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Tipo";
-            this.Column2.HeaderText = "Tipo";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "descricao";
-            this.Column3.HeaderText = "Descrição";
-            this.Column3.Name = "Column3";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "vencimento";
-            this.Column6.HeaderText = "Vencimento";
-            this.Column6.Name = "Column6";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "lancamento";
-            this.Column4.HeaderText = "Lançamento";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Efetuada";
-            this.Column5.HeaderText = "Efetuada";
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.cbbPagarReceber.FormattingEnabled = true;
+            this.cbbPagarReceber.Location = new System.Drawing.Point(653, 12);
+            this.cbbPagarReceber.Name = "cbbPagarReceber";
+            this.cbbPagarReceber.Size = new System.Drawing.Size(154, 24);
+            this.cbbPagarReceber.TabIndex = 11;
+            this.cbbPagarReceber.SelectedIndexChanged += new System.EventHandler(this.cbbPagarReceber_SelectedIndexChanged);
             // 
             // Principal
             // 
@@ -500,16 +510,16 @@
             this.Load += new System.EventHandler(this.Principal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabLista.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RecDespSource)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.tabCadastro.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ValorPagar)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RecDespSource)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,5 +569,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
+        private System.Windows.Forms.ComboBox cbbPagarReceber;
     }
 }
