@@ -11,49 +11,48 @@ namespace Trabalhoo.Repositories
             if (tratarInjection)
             {
 
-                var query = "SELECT * FROM users WHERE email = @email AND password = @password";
-                var reader = _conn.ExecuteReader(query, new { email, password});
-                var isAuthenticated = reader.Read();
+                var sSQL = "SELECT * FROM users WHERE email = @email AND password = @password";
+                var Result = _conn.ExecuteReader(sSQL, new { email, password});
 
-                if (isAuthenticated)
+                if (Result.Read())
                 {
 
-                    Login user = new Login();
-                    user.Id = int.Parse(reader["id"].ToString());
-                    user.Username = reader["username"] as string;
-                    user.Email = reader["email"] as string;
-                    user.Password = reader["password"] as string;
+                    Login usu = new Login();
+                    usu.Id = int.Parse(Result["id"].ToString());
+                    usu.Username = Result["username"] as string;
+                    usu.Email = Result["email"] as string;
+                    usu.Password = Result["password"] as string;
 
-                    reader.Close();
-                    return user;
+                    Result.Close();
+                    return usu;
 
                 }
 
-                reader.Close();
+                Result.Close();
                 return null;
             }
             else
             {
 
-                var query = "SELECT * FROM users WHERE email = '" + email + "' AND password = '" + password + "'";
-                var reader = _conn.ExecuteReader(query);
-                var isAuthenticated = reader.Read();
+                var sSQL = "SELECT * FROM users WHERE email = '" + email +
+                            "' AND password = '" + password + "'";
+                var Result = _conn.ExecuteReader(sSQL);
 
-                if (isAuthenticated)
+                if (Result.Read())
                 {
 
-                    Login user = new Login();
-                    user.Id = int.Parse(reader["id"].ToString());
-                    user.Username = reader["username"] as string;
-                    user.Email = reader["email"] as string;
-                    user.Password = reader["password"] as string;
+                    Login usu = new Login();
+                    usu.Id = int.Parse(Result["id"].ToString());
+                    usu.Username = Result["username"] as string;
+                    usu.Email = Result["email"] as string;
+                    usu.Password = Result["password"] as string;
 
-                    reader.Close();
-                    return user;
+                    Result.Close();
+                    return usu;
 
                 }
 
-                reader.Close();
+                Result.Close();
                 return null;
             }
 

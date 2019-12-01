@@ -30,23 +30,18 @@ namespace Trabalhoo.Services
             this.SetRepository(_repository);
         }
 
-        public double Saldo(List<Princi> principal)
+        public double ValorTotalReceberERecebido(List<Princi> principal)
         {
-            var pagar = 0.0D;
             var receber = 0.0D;
             foreach (var item in principal)
             {
-                if (item.Tipo == Trabalhoo.TipoDaConta.Pagar)
-                {
-                    pagar += item.Valor;
-                }
-                else
+                if (item.Tipo == Trabalhoo.TipoDaConta.Receber)
                 {
                     receber += item.Valor;
                 }
             }
 
-            return receber - pagar;
+            return receber;
         }
 
         public double TotalContasPagar(List<Princi> contas)
@@ -78,36 +73,30 @@ namespace Trabalhoo.Services
             return saldo;
         }
 
-        public double ValorMedioContasPagar(List<Princi> contas)
+        public double QTDContaReceber(List<Princi> contas)
         {
-            var saldo = 0.0D;
-            foreach (var item in contas.Where(f => !f.Efetuada))
-            {
-                if (item.Tipo == Trabalhoo.TipoDaConta.Pagar)
-                {
-                    saldo += item.Valor;
-                }
-            }
-
-            if (contas.Where(f => !f.Efetuada).Where(f => f.Tipo == Trabalhoo.TipoDaConta.Pagar).Count() == 0) return 0.0D;
-
-            return saldo / contas.Where(f => !f.Efetuada).Where(f => f.Tipo == Trabalhoo.TipoDaConta.Pagar).Count();
-        }
-
-        public double ValorMedioContasReceber(List<Princi> contas)
-        {
-            var saldo = 0.0D;
+            var QTD = 0.0D;
             foreach (var item in contas.Where(f => !f.Efetuada))
             {
                 if (item.Tipo == Trabalhoo.TipoDaConta.Receber)
                 {
-                    saldo += item.Valor;
+                    QTD++;
                 }
             }
+            return QTD;
+        }
 
-            if (contas.Where(f => !f.Efetuada).Where(f => f.Tipo == Trabalhoo.TipoDaConta.Receber).Count() == 0) return 0.0D;
-
-            return saldo / contas.Where(f => !f.Efetuada).Where(f => f.Tipo == Trabalhoo.TipoDaConta.Receber).Count();
+        public double QTDContaPagar(List<Princi> contas)
+        {
+            var QTD = 0.0D;
+            foreach (var item in contas.Where(f => !f.Efetuada))
+            {
+                if (item.Tipo == Trabalhoo.TipoDaConta.Pagar)
+                {
+                    QTD++;
+                }
+            }
+            return QTD;
         }
     }
 }

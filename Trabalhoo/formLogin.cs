@@ -19,14 +19,13 @@ namespace Trabalhoo
         private void btnLogarCom_Click(object sender, System.EventArgs e)
         {
             // com injection
+
             using (var service = new LoginService())
             {
                 var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, false);
 
                 if (!(autenticacao is null))
                 {
-
-                    Global.Instance.SetUser(autenticacao);
 
                     this.Hide();
                     Principal frmP = new Principal();
@@ -46,14 +45,13 @@ namespace Trabalhoo
         private void btnLogarSem_Click(object sender, System.EventArgs e)
         {
             // sem injection
+
             using (var service = new LoginService())
             {
                 var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, true);
 
                 if (!(autenticacao is null))
                 {
-
-                    Global.Instance.SetUser(autenticacao);
 
                     this.Hide();
                     Principal frmP = new Principal();

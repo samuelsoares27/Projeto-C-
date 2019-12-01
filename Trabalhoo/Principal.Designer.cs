@@ -45,6 +45,7 @@
             this.lblreceber = new System.Windows.Forms.Label();
             this.lblpagar = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbPagarReceber = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnSemFiltro = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ValorPagar = new System.Windows.Forms.NumericUpDown();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.cbbPagarReceber = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabLista.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -229,6 +229,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 50);
             this.panel2.TabIndex = 8;
+            // 
+            // cbbPagarReceber
+            // 
+            this.cbbPagarReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPagarReceber.FormattingEnabled = true;
+            this.cbbPagarReceber.Location = new System.Drawing.Point(787, 7);
+            this.cbbPagarReceber.Name = "cbbPagarReceber";
+            this.cbbPagarReceber.Size = new System.Drawing.Size(209, 37);
+            this.cbbPagarReceber.TabIndex = 11;
+            this.cbbPagarReceber.SelectedIndexChanged += new System.EventHandler(this.cbbPagarReceber_SelectedIndexChanged);
             // 
             // btnCadastrar
             // 
@@ -486,15 +496,6 @@
             this.ValorPagar.Name = "ValorPagar";
             this.ValorPagar.Size = new System.Drawing.Size(285, 22);
             this.ValorPagar.TabIndex = 4;
-            // 
-            // cbbPagarReceber
-            // 
-            this.cbbPagarReceber.FormattingEnabled = true;
-            this.cbbPagarReceber.Location = new System.Drawing.Point(653, 12);
-            this.cbbPagarReceber.Name = "cbbPagarReceber";
-            this.cbbPagarReceber.Size = new System.Drawing.Size(154, 24);
-            this.cbbPagarReceber.TabIndex = 11;
-            this.cbbPagarReceber.SelectedIndexChanged += new System.EventHandler(this.cbbPagarReceber_SelectedIndexChanged);
             // 
             // Principal
             // 

@@ -261,6 +261,7 @@ namespace Trabalhoo
 
                     lblpagar.Text = "Pagar: R$ " + totalPagar;
                     lblreceber.Text = "Receber: R$ " + totalReceber;
+                    
                 }
             }
             else if (cbbPagarReceber.Text == "Receber")
@@ -276,9 +277,6 @@ namespace Trabalhoo
                     lblreceber.Text = "Receber: R$ " + totalReceber;
                 }
             }
-
-
-
         }
     }
 }
