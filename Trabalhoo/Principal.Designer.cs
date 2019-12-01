@@ -33,13 +33,6 @@
             this.tabLista = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RecDespSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblreceber = new System.Windows.Forms.Label();
@@ -66,6 +59,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ValorPagar = new System.Windows.Forms.NumericUpDown();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabLista.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -139,50 +139,6 @@
             this.dgvLista.RowTemplate.Height = 24;
             this.dgvLista.Size = new System.Drawing.Size(1000, 438);
             this.dgvLista.TabIndex = 1;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "id";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "valor";
-            this.Column1.HeaderText = "Valor";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Tipo";
-            this.Column2.HeaderText = "Tipo";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "descricao";
-            this.Column3.HeaderText = "Descrição";
-            this.Column3.Name = "Column3";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "vencimento";
-            this.Column6.HeaderText = "Vencimento";
-            this.Column6.Name = "Column6";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "lancamento";
-            this.Column4.HeaderText = "Lançamento";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Efetuada";
-            this.Column5.HeaderText = "Efetuada";
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // panel3
             // 
@@ -428,9 +384,9 @@
             this.cbPagar.Location = new System.Drawing.Point(235, 250);
             this.cbPagar.Margin = new System.Windows.Forms.Padding(4);
             this.cbPagar.Name = "cbPagar";
-            this.cbPagar.Size = new System.Drawing.Size(104, 21);
+            this.cbPagar.Size = new System.Drawing.Size(80, 21);
             this.cbPagar.TabIndex = 10;
-            this.cbPagar.Text = "Conta Paga";
+            this.cbPagar.Text = "Quitada";
             this.cbPagar.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -496,6 +452,50 @@
             this.ValorPagar.Name = "ValorPagar";
             this.ValorPagar.Size = new System.Drawing.Size(285, 22);
             this.ValorPagar.TabIndex = 4;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "id";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "valor";
+            this.Column1.HeaderText = "Valor";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Tipo";
+            this.Column2.HeaderText = "Tipo";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "descricao";
+            this.Column3.HeaderText = "Descrição";
+            this.Column3.Name = "Column3";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "vencimento";
+            this.Column6.HeaderText = "Vencimento";
+            this.Column6.Name = "Column6";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "lancamento";
+            this.Column4.HeaderText = "Lançamento";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Efetuada";
+            this.Column5.HeaderText = "Quitada";
+            this.Column5.Name = "Column5";
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Principal
             // 
@@ -563,6 +563,7 @@
         private System.Windows.Forms.Label lblpagar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.ComboBox cbbPagarReceber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -570,6 +571,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private System.Windows.Forms.ComboBox cbbPagarReceber;
     }
 }

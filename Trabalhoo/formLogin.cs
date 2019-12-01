@@ -22,7 +22,7 @@ namespace Trabalhoo
 
             using (var service = new LoginService())
             {
-                var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, false);
+                var autenticacao = service.GetLogin(txtEmail.Text, txtSenha.Text, false);
 
                 if (!(autenticacao is null))
                 {
@@ -48,7 +48,7 @@ namespace Trabalhoo
 
             using (var service = new LoginService())
             {
-                var autenticacao = service.GetLogin(tbxEmail.Text, tbxSenha.Text, true);
+                var autenticacao = service.GetLogin(txtEmail.Text, txtSenha.Text, true);
 
                 if (!(autenticacao is null))
                 {
