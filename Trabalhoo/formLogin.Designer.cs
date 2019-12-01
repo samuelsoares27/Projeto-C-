@@ -48,11 +48,35 @@
             this.button2 = new System.Windows.Forms.Button();
             pictureBox3 = new System.Windows.Forms.PictureBox();
             pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = global::Trabalhoo.Properties.Resources.user;
+            pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            pictureBox3.Location = new System.Drawing.Point(654, 85);
+            pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(111, 101);
+            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 19;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = global::Trabalhoo.Properties.Resources.Logo_XPEvents;
+            pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            pictureBox4.Location = new System.Drawing.Point(0, 0);
+            pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new System.Drawing.Size(519, 491);
+            pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 17;
+            pictureBox4.TabStop = false;
             // 
             // btnLogarCom
             // 
@@ -135,18 +159,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = global::Trabalhoo.Properties.Resources.user;
-            pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            pictureBox3.Location = new System.Drawing.Point(665, 64);
-            pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new System.Drawing.Size(111, 101);
-            pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 19;
-            pictureBox3.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -154,7 +166,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(849, 43);
+            this.label3.Location = new System.Drawing.Point(864, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 25);
@@ -162,24 +174,12 @@
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.LblSair_Click);
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = global::Trabalhoo.Properties.Resources.Logo_XPEvents;
-            pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            pictureBox4.Location = new System.Drawing.Point(81, 28);
-            pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new System.Drawing.Size(463, 434);
-            pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 17;
-            pictureBox4.TabStop = false;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(592, 255);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(581, 276);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 22);
             this.textBox1.TabIndex = 16;
@@ -188,7 +188,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(588, 234);
+            this.label4.Location = new System.Drawing.Point(577, 255);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 17);
@@ -199,7 +199,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(588, 176);
+            this.label5.Location = new System.Drawing.Point(577, 197);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 17);
@@ -209,8 +209,8 @@
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(592, 197);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(581, 218);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(254, 22);
             this.textBox2.TabIndex = 13;
@@ -222,8 +222,8 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(590, 369);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(579, 390);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(256, 58);
             this.button1.TabIndex = 12;
@@ -238,8 +238,8 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(592, 304);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(581, 325);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(255, 58);
             this.button2.TabIndex = 11;
@@ -276,10 +276,11 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "FormLogin";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
