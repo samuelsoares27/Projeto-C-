@@ -108,6 +108,8 @@ namespace Trabalhoo
             dtpPagar.Value = DateTime.Now;
             tabControl1.SelectedTab = tabLista;
             tabControl1.TabPages.Remove(tabCadastro);
+            Totalizadores();
+
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -146,11 +148,6 @@ namespace Trabalhoo
             tabControl1.SelectedTab = tabCadastro;
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {  
             using (var service = new PrincipalServices())
@@ -160,9 +157,21 @@ namespace Trabalhoo
                 frm.ShowDialog();
 
                 if (frm.data is null) return;
+                data = frm.data;
                 contas = service.Retorna();
                 RecDespSource.DataSource = contas.Where(f => f.Vencimento.ToShortDateString() == data.GetValueOrDefault().ToShortDateString()).ToList();
                 dgvLista.Refresh();
+
+                if (!(frm.data is null))
+                {
+                    contas = contas.Where(f => f.Vencimento.ToShortDateString() == data.GetValueOrDefault().ToShortDateString()).ToList();
+                }
+
+                var totalReceber = service.TotalContasReceber(contas.ToList());
+                var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                lblpagar.Text = "Pagar: R$ " + totalPagar;
+                lblreceber.Text = "Receber: R$ " + totalReceber;
             }
             
         }
@@ -173,6 +182,9 @@ namespace Trabalhoo
             {
                 RecDespSource.DataSource = service.Retorna();
             }
+
+            data = null;
+            Totalizadores();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -185,6 +197,7 @@ namespace Trabalhoo
             tabControl1.SelectedTab = tabLista;
 
             tabControl1.TabPages.Remove(tabCadastro);
+            Totalizadores();
 
         }
 
