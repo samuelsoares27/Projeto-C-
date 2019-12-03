@@ -207,6 +207,7 @@ namespace Trabalhoo
 
         private void button4_Click(object sender, EventArgs e)
         {
+            IEnumerable<Princi> contas = null;
             var conta = RecDespSource.Current as Princi;
             if (conta.Efetuada)
             {
@@ -220,9 +221,17 @@ namespace Trabalhoo
                 {
 
                     service.Delete(conta);
-                    RecDespSource.DataSource = service.Retorna();
-        
+                    contas = service.Retorna();
+                    RecDespSource.DataSource = contas;
+
+                    var totalReceber = service.TotalContasReceber(contas.ToList());
+                    var totalPagar = service.TotalContasPagar(contas.ToList());
+
+                    lblpagar.Text = "Pagar: R$ " + totalPagar;
+                    lblreceber.Text = "Receber: R$ " + totalReceber;
+
                 }
+
             }
         }
 
